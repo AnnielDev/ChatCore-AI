@@ -1,1 +1,1 @@
-# ChatCore-AI
+# ChatCore AI
