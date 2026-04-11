@@ -3,7 +3,7 @@ import { BsChatLeftText } from "react-icons/bs";
 import { RiHistoryFill } from "react-icons/ri";
 export default function SideBar() {
   const navItems = [
-    { name: "Chat", path: "/chat", icon: BsChatLeftText },
+    { name: "Chat", path: "/", icon: BsChatLeftText },
     { name: "History", path: "/history", icon: RiHistoryFill },
   ];
   return (
