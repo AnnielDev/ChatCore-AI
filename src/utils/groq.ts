@@ -38,7 +38,7 @@ function getLanguageInstruction(language: AppLanguage) {
     return "Responda sempre em portugues, independentemente do idioma do usuario.";
   }
 
-  return "Responde siempre en espanol, independientemente del idioma del usuario.";
+  return "Responde siempre en español, independientemente del idioma del usuario.";
 }
 
 export async function requestGroqReply(

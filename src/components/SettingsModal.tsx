@@ -51,7 +51,7 @@ export default function SettingsModal({
               }
               className="w-full rounded-lg border border-white/20 bg-[#111a30] px-3 py-2 text-sm text-white outline-none"
             >
-              <option value="es">Espanol</option>
+              <option value="es">Español</option>
               <option value="en">English</option>
               <option value="pt">Portugues</option>
             </select>
