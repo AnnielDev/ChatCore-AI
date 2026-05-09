@@ -36,7 +36,7 @@
     ```
 
 3.  **Configura las variables de entorno**:
-    Crea un archivo `.env` en la raiz del proyecto e incluye tu API Key:
+    Crea un archivo `.env` en la raiz del proyecto e incluye tu API Key
 
 ## 🚀 Comandos
 
