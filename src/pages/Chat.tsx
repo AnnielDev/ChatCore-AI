@@ -96,12 +96,12 @@ export default function Chat() {
 
   return (
     <div className="flex h-full min-w-full flex-col justify-between">
-      <div className="h-full min-w-full overflow-y-auto p-10 pb-4">
+      <div className="h-full min-w-full overflow-y-auto p-4 pb-3 md:p-10 md:pb-4">
         <div className="mx-auto flex w-full max-w-4xl flex-col gap-4 pt-4">
           {messages.map((message, index) => (
             <div
               key={`${message.role}-${index}`}
-              className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm text-white ${
+              className={`max-w-[92%] rounded-2xl px-4 py-3 text-sm text-white md:max-w-[85%] ${
                 message.role === "user"
                   ? "ml-auto bg-(--secondary-color)"
                   : "mr-auto bg-white/10"
@@ -120,7 +120,7 @@ export default function Chat() {
         </div>
       </div>
 
-      <div className="w-full p-10 pt-4">
+      <div className="w-full p-4 pt-3 md:p-10 md:pt-4">
         <div className="mx-auto w-full max-w-4xl">
           <div className="relative">
             <input
@@ -135,7 +135,7 @@ export default function Chat() {
                   void sendMessage();
                 }
               }}
-              className="w-full rounded-full bg-gray-800 p-4 px-6 pr-16 text-white outline-none ring-1 ring-white/10 placeholder:text-white/50 focus:ring-(--third-color) disabled:opacity-70"
+              className="w-full rounded-full bg-gray-800 p-3.5 px-5 pr-14 text-sm text-white outline-none ring-1 ring-white/10 placeholder:text-white/50 focus:ring-(--third-color) disabled:opacity-70 md:p-4 md:px-6 md:pr-16 md:text-base"
               placeholder={t("chat.placeholder")}
             />
 
@@ -143,7 +143,7 @@ export default function Chat() {
               type="button"
               onClick={() => void sendMessage()}
               disabled={!canSend}
-              className="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-(--secondary-color) p-3 text-white disabled:cursor-not-allowed disabled:opacity-50"
+              className="absolute right-1.5 top-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-(--secondary-color) p-2.5 text-white disabled:cursor-not-allowed disabled:opacity-50 md:right-2 md:p-3"
               aria-label={t("chat.send")}
             >
               <FaArrowUp />

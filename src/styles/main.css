@@ -11,3 +11,14 @@
 * {
   font-family: "Roboto", sans-serif;
 }
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--primary-color);
+}

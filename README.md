@@ -36,10 +36,7 @@
     ```
 
 3.  **Configura las variables de entorno**:
-    Crea un archivo `.env` en la raiz del proyecto e incluye tu API Key de Groq:
-    ```env
-    VITE_GROQ_API_KEY=tu_api_key_aqui
-    ```
+    Crea un archivo `.env` en la raiz del proyecto e incluye tu API Key:
 
 ## 🚀 Comandos
 
