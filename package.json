@@ -6,9 +6,9 @@
   "packageManager": "pnpm@10.14.0",
   "scripts": {
     "dev": "npx only-allow pnpm && vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
+    "build": "npx only-allow pnpm && tsc -b && vite build",
+    "lint": "npx only-allow pnpm && eslint .",
+    "preview": "npx only-allow pnpm && vite preview",
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
