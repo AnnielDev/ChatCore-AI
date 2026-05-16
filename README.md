@@ -40,13 +40,7 @@ cd ChatCore-AI
 pnpm install
 ```
 
-3. Crea un archivo `.env` en la raíz con estas variables:
-
-```env
-VITE_GROQ_API_KEY=tu_api_key
-# Opcional (valor por defecto: llama-3.3-70b-versatile)
-VITE_GROQ_MODEL=llama-3.3-70b-versatile
-```
+3. Crea un archivo `.env` en la raíz y agrega tu API key del proveedor de IA.
 
 ## Scripts disponibles
 
