@@ -1,74 +1,85 @@
 # ChatCore AI
 
-**ChatCore AI** es una aplicacion web moderna de chat desarrollada con React y Vite, optimizada para ofrecer una experiencia de usuario fluida y reactiva. Esta version incorpora un sistema de persistencia de mensajes y configuraciones, integracion con API externa para respuestas inteligentes, y un diseño responsive que funciona perfectamente en dispositivos moviles.
+**ChatCore AI** es una aplicación web de chat construida con React + Vite. El proyecto prioriza una experiencia fluida, con persistencia local de mensajes y configuración, integración con Groq para respuestas inteligentes y diseño adaptable a escritorio y móvil.
 
-## 🚀 Características Principales
+## Características principales
 
-- **Interfaz de Usuario Moderna**: Diseño minimalista y elegante con animaciones fluidas y efectos de desenfoque (blur).
-- **Persistencia de Datos**: Guarda automaticamente el historial de chat en el almacenamiento local (`localStorage`) y lo restaura al iniciar.
-- **Integracion con Groq API**: Utiliza `groq-sdk` para obtener respuestas inteligentes del modelo **llama-3.3-70b-versatile**.
-- **Soporte Multilingüe**: Cambia entre Español, Inglés y Portugués.
-- **Responsive Design**: Se adapta perfectamente a diferentes tamaños de pantalla.
-- **Modo Oscuro**: Tema automatizado basado en la configuración del sistema.
+- Interfaz moderna con transiciones suaves y enfoque en usabilidad.
+- Persistencia local con `localStorage` para conservar historial y ajustes.
+- Integración con la API de Groq mediante `fetch`.
+- Soporte multilingüe: español, inglés y portugués.
+- Diseño responsive para distintos tamaños de pantalla.
+- Tema oscuro automático según la preferencia del sistema.
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías
 
-- **Framework**: [React 19](https://react.dev/)
-- **Build Tool**: [Vite](https://vitejs.dev/)
-- **State Management**: Hooks de React (useState, useEffect, useMemo, useRef)
-- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
-- **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
-- **Routing**: [React Router](https://reactrouter.com/)
+- React 19
+- Vite 8
+- TypeScript 6
+- Tailwind CSS 4
+- React Router 7
+- React Icons
 
-## ⚙️ Configuración e Instalación
+## Requisitos
 
-1.  **Clona el repositorio**:
+- Node.js `>=20.17.0`
+- `pnpm >=10.14.0`
 
-    ```bash
-    git clone <url-del-repositorio>
-    cd ChatCore-AI
-    ```
+## Instalación y configuración
 
-2.  **Instala las dependencias**:
+1. Clona el repositorio:
 
-    ```bash
-    npm install
-    ```
+```bash
+git clone <url-del-repositorio>
+cd ChatCore-AI
+```
 
-3.  **Configura las variables de entorno**:
-    Crea un archivo `.env` en la raiz del proyecto e incluye tu API Key
+2. Instala dependencias:
 
-## 🚀 Comandos
+```bash
+pnpm install
+```
 
-- **Iniciar servidor de desarrollo**:
+3. Crea un archivo `.env` en la raíz con estas variables:
 
-  ```bash
-  npm run dev
-  ```
+```env
+VITE_GROQ_API_KEY=tu_api_key
+# Opcional (valor por defecto: llama-3.3-70b-versatile)
+VITE_GROQ_MODEL=llama-3.3-70b-versatile
+```
 
-  (Abre `http://localhost:5173` en tu navegador)
+## Scripts disponibles
 
-- **Construir para producción**:
+- Desarrollo:
 
-  ```bash
-  npm run build
-  ```
+```bash
+pnpm dev
+```
 
-- **Previsualizar producción**:
+Abre `http://localhost:5173` en tu navegador.
 
-  ```bash
-  npm run preview
-  ```
+- Build de producción:
 
-- **Linter**:
-  ```bash
-  npm run lint
-  ```
+```bash
+pnpm build
+```
 
-## 📁 Estructura del Proyecto
+- Previsualización local del build:
 
-- `src/pages/`: Contiene las interfaces principales (`Chat.tsx`).
-- `src/layout/`: Define la estructura visual (`SideBar.tsx`).
-- `src/components/`: Componentes reutilizables (`LoadingPoints.tsx`, `SettingsModal.tsx`).
-- `src/context/`: Manejo de estado global (`I18nContext.tsx`, `SettingsModalContext.tsx`).
-- `src/utils/`: Lógica de negocio e integraciones (`groq.ts`).
+```bash
+pnpm preview
+```
+
+- Lint:
+
+```bash
+pnpm lint
+```
+
+## Estructura del proyecto
+
+- `src/pages/`: vistas principales (por ejemplo, `Chat.tsx`).
+- `src/layout/`: estructura general de interfaz (por ejemplo, `SideBar.tsx`).
+- `src/components/`: componentes reutilizables.
+- `src/context/`: estado global y contexto de aplicación.
+- `src/utils/`: utilidades e integración de API (por ejemplo, `groq.ts`).
