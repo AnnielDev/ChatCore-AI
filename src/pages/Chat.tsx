@@ -3,6 +3,7 @@ import { FaArrowUp } from "react-icons/fa";
 import { requestGroqReply, type ChatMessage } from "@/utils/groq";
 import { useI18n } from "@/context/I18nContext";
 import LoadingPoints from "@/components/LoadingPoints";
+import ChatMessageBubble from "@/components/ChatMessage";
 import SettingsModal from "@/components/SettingsModal";
 import type { AppLanguage } from "@/i18n/types";
 import { useSettingsModal } from "@/context/SettingsModalContext";
@@ -99,16 +100,10 @@ export default function Chat() {
       <div className="h-full min-w-full overflow-y-auto p-4 pb-3 md:p-10 md:pb-4">
         <div className="mx-auto flex w-full max-w-4xl flex-col gap-4 pt-4">
           {messages.map((message, index) => (
-            <div
+            <ChatMessageBubble
               key={`${message.role}-${index}`}
-              className={`max-w-[92%] rounded-2xl px-4 py-3 text-sm text-white md:max-w-[85%] ${
-                message.role === "user"
-                  ? "ml-auto bg-(--secondary-color)"
-                  : "mr-auto bg-white/10"
-              }`}
-            >
-              {message.content}
-            </div>
+              message={message}
+            />
           ))}
 
           {loading ? (
