@@ -22,3 +22,41 @@ body {
   margin: 0;
   background: var(--primary-color);
 }
+
+.chat-message {
+  line-height: 1.6;
+}
+
+.chat-message-assistant {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.chat-message-assistant > * + * {
+  margin-top: 0.75rem;
+}
+
+.chat-message-assistant p + p {
+  margin-top: 0.75rem;
+}
+
+.chat-message-assistant ul,
+.chat-message-assistant ol {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.chat-message-assistant li + li {
+  margin-top: 0.35rem;
+}
+
+.chat-message-assistant strong {
+  font-weight: 700;
+  color: #fff;
+}
+
+.chat-message-assistant code {
+  border-radius: 0.4rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.15rem 0.35rem;
+  font-size: 0.92em;
+}
